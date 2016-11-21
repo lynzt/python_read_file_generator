@@ -1,8 +1,16 @@
 import csv
 
-def read_file(file):
-    with open(file, mode='r') as infile:
-        reader = csv.reader(infile)
-        # with open('coors_new.csv', mode='w') as outfile:
-        #     writer = csv.writer(outfile)
-        #     mydict = {rows[0]:rows[1] for rows in reader}
+def get_data(filename, delimiter):
+    with open(filename, "rb") as csvfile:
+        datareader = csv.reader(csvfile, delimiter=delimiter)
+        for row in datareader:
+            yield row
+
+def create_dict_from_list(row, row_titles):
+    data = {}
+    for idx, row_title in enumerate(row_titles):
+        data[row_title] = row[idx]
+
+    return data
+
+# name, age, start_year, current_positions = [(row.text).strip() for row in rows]
