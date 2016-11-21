@@ -6,5 +6,5 @@ setup(name='read_file_generator',
     description='read a file | convert row/list values to dict',
     author='lynzt',
     url='https://github.com/lynzt/python_read_file_generator',
-    packages=['read_file'],
+    packages=['read_file_generator'],
     )
