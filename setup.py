@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 print find_packages()
-setup(name='read_file_generator',
+setup(name='python_read_file_generator',
     version='0.0.1',
     description='read a file | convert row/list values to dict',
     author='lynzt',
