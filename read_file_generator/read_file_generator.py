@@ -1,7 +1,7 @@
 import csv
 
 def get_data(filename, delimiter):
-    with open(filename, "rb") as csvfile:
+    with open(filename, "rt") as csvfile:
         datareader = csv.reader(csvfile, delimiter=delimiter)
         for row in datareader:
             yield row
